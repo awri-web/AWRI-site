@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bison Conservation Map | American Wildlife Research Institute</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; }
+    .back-btn {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 10000;
+      padding: 0.5rem 1rem;
+      background: rgba(15, 23, 42, 0.95);
+      color: white;
+      text-decoration: none;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: background 0.2s;
+    }
+    .back-btn:hover {
+      background: rgba(15, 23, 42, 1);
+    }
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-btn">&larr; Back to AWRI</a>
+  <iframe src="map/index.html" title="Bison Conservation Map"></iframe>
+</body>
+</html>
