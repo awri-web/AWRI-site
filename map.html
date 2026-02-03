@@ -26,6 +26,24 @@
     .back-btn:hover {
       background: rgba(15, 23, 42, 1);
     }
+    .donate-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 10000;
+      padding: 0.5rem 1.25rem;
+      background: #2ecc71;
+      color: white;
+      text-decoration: none;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .donate-btn:hover {
+      background: #27ae60;
+    }
     iframe {
       width: 100vw;
       height: 100vh;
@@ -35,6 +53,7 @@
 </head>
 <body>
   <a href="index.html" class="back-btn">&larr; Back to AWRI</a>
+  <a href="https://buy.stripe.com/14AfZi7uE4gscOb2PkeAg00" target="_blank" rel="noopener noreferrer" class="donate-btn">Donate</a>
   <iframe src="map/index.html" title="Bison Conservation Map"></iframe>
 </body>
 </html>
