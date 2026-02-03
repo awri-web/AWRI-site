@@ -5,10 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>American Buffalo Map</title>
-    <script type="module" crossorigin src="./assets/index-DcLLrswF.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-5vkNGJWv.css">
+    <script type="module" crossorigin src="./assets/index-BqleXH9h.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DFvyJYKj.css">
   </head>
   <body>
+    <!-- SVG Pattern Definitions - must be in DOM for Leaflet polygons to reference -->
+    <svg id="svg-pattern-defs" width="0" height="0" style="position:absolute;visibility:hidden;">
+      <defs>
+        <!-- Stripe pattern for wild+tribal (green #22c55e + purple #a855f7) -->
+        <pattern id="stripe-pattern" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
+          <rect width="5" height="10" fill="#22c55e"/>
+          <rect x="5" width="5" height="10" fill="#a855f7"/>
+        </pattern>
+        <!-- Stripe pattern for conservation+wild (blue #3b82f6 + green #22c55e) -->
+        <pattern id="stripe-pattern-conservation-wild" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
+          <rect width="5" height="10" fill="#3b82f6"/>
+          <rect x="5" width="5" height="10" fill="#22c55e"/>
+        </pattern>
+      </defs>
+    </svg>
     <div id="root"></div>
   </body>
 </html>
