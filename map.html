@@ -26,6 +26,24 @@
     .back-btn:hover {
       background: rgba(15, 23, 42, 1);
     }
+    /* Mobile: make back button a small square with just arrow */
+    @media (max-width: 768px) {
+      .back-btn {
+        top: auto;
+        bottom: 5.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        border-radius: 8px;
+      }
+      .back-btn .back-text {
+        display: none;
+      }
+    }
     .donate-btn {
       position: fixed;
       bottom: 4rem;
@@ -52,7 +70,7 @@
   </style>
 </head>
 <body>
-  <a href="index.html" class="back-btn">&larr; Back to AWRI</a>
+  <a href="index.html" class="back-btn">&larr;<span class="back-text"> Back to AWRI</span></a>
   <a href="https://buy.stripe.com/14AfZi7uE4gscOb2PkeAg00" target="_blank" rel="noopener noreferrer" class="donate-btn">Donate</a>
   <iframe src="map/index.html" title="Bison Conservation Map"></iframe>
 </body>
