@@ -47,9 +47,9 @@ Error generating stack: `+s.message+`
             grid-template-columns: 1fr !important;
             grid-template-rows: auto auto auto !important;
           }
-          .cwd-map-grid > :nth-child(1) { order: 2; }
-          .cwd-map-grid > :nth-child(2) { order: 1; }
-          .cwd-map-grid > :nth-child(3) { order: 3; }
+          .cwd-map-grid > :nth-child(1) { order: 3; }
+          .cwd-map-grid > :nth-child(2) { order: 2; }
+          .cwd-map-grid > :nth-child(3) { order: 1; }
           .cwd-map-controls { flex-direction: row !important; flex-wrap: wrap !important; }
           .cwd-map-controls > div, .cwd-map-controls > button { flex: 1; min-width: 140px; }
           .cwd-map-year { font-size: 36px !important; }
