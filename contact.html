@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | American Wildlife Research Initiative</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .nav-brand {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: #1a1a1a;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .nav-links a {
+      font-family: 'EB Garamond', Georgia, serif;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: 1.1rem;
+      font-weight: 400;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 0.6; }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3rem 2rem;
+    }
+    .contact-card {
+      max-width: 520px;
+      width: 100%;
+    }
+    .contact-card h1 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+    .contact-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 0.4rem;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: #1a1a1a;
+      background: #fafafa;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #2ecc71;
+    }
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .submit-btn {
+      padding: 0.875rem 2.5rem;
+      border: 2px solid #2ecc71;
+      background: transparent;
+      color: #2ecc71;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .submit-btn:hover {
+      background: #2ecc71;
+      color: white;
+    }
+    .submit-btn:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+    .success-msg {
+      display: none;
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      border-radius: 6px;
+      padding: 1rem;
+      color: #166534;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+    .error-msg {
+      display: none;
+      background: #fef2f2;
+      border: 1px solid #f87171;
+      border-radius: 6px;
+      padding: 1rem;
+      color: #991b1b;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 3rem;
+      color: #999;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.5rem; }
+      main { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-brand">American Wildlife Research Initiative</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="https://buy.stripe.com/14AfZi7uE4gscOb2PkeAg00" target="_blank" rel="noopener noreferrer">Donate</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="contact-card">
+      <h1>Get in Touch</h1>
+      <p>Have a question, found an error on our maps, or know of a herd we're missing? We'd love to hear from you.</p>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+        <div class="success-msg" id="successMsg">Thank you! Your message has been sent. We'll get back to you soon.</div>
+        <div class="error-msg" id="errorMsg">Something went wrong. Please email us directly at americanwildliferesearch@gmail.com</div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 American Wildlife Research Initiative. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('submitBtn');
+      var success = document.getElementById('successMsg');
+      var error = document.getElementById('errorMsg');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      success.style.display = 'none';
+      error.style.display = 'none';
+
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value;
+
+      // Use formsubmit.co to forward to email (no backend needed)
+      fetch('https://formsubmit.co/ajax/americanwildliferesearch@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, _subject: subject, message: message })
+      })
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        if (data.success) {
+          success.style.display = 'block';
+          document.getElementById('contactForm').reset();
+        } else {
+          error.style.display = 'block';
+        }
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+      })
+      .catch(function() {
+        error.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+      });
+    });
+  </script>
+</body>
+</html>

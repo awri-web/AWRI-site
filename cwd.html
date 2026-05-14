@@ -57,6 +57,27 @@
     .donate-btn .donate-symbol {
       display: none;
     }
+    .contact-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 10000;
+      padding: 0.5rem 1.25rem;
+      background: #c0392b;
+      color: white;
+      text-decoration: none;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .contact-btn:hover {
+      background: #a93226;
+    }
+    .contact-btn .contact-symbol {
+      display: none;
+    }
     @media (max-width: 768px) {
       .donate-btn {
         width: 2.5rem;
@@ -75,6 +96,23 @@
       .donate-btn .donate-symbol {
         display: inline;
       }
+      .contact-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        bottom: 2.5rem;
+      }
+      .contact-btn .contact-text {
+        display: none;
+      }
+      .contact-btn .contact-symbol {
+        display: inline;
+      }
     }
     iframe {
       width: 100vw;
@@ -86,6 +124,7 @@
 <body>
   <a href="index.html" class="back-btn">&larr;</a>
   <a href="https://buy.stripe.com/14AfZi7uE4gscOb2PkeAg00" target="_blank" rel="noopener noreferrer" class="donate-btn"><span class="donate-symbol">$</span><span class="donate-text">Support</span></a>
-  <iframe src="cwd/index.html?v=20" title="Wisconsin CWD Surveillance Dashboard"></iframe>
+  <a href="contact.html" class="contact-btn"><span class="contact-symbol">&#9993;</span><span class="contact-text">Contact</span></a>
+  <iframe src="cwd/index.html?v=21" title="Wisconsin CWD Surveillance Dashboard"></iframe>
 </body>
 </html>
